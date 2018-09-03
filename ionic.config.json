@@ -1,0 +1,8 @@
+{
+  "name": "Ionic-POS",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "pro_id": "71a43dc3"
+}
