@@ -1,0 +1,18 @@
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 97%;
+
+    ion-list, ion-button {
+        width: 100%;
+    }
+
+    ion-list::before {
+        align-self: flex-start;
+    }
+    ion-button::after {
+        align-self: flex-end;
+    }
+}

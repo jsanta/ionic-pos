@@ -1,0 +1,16 @@
+<ion-split-pane when="(min-width: 475px)">
+
+    <!--  our side menu  -->
+    <ion-menu [content]="content">
+        <ion-content>
+            <ion-list>
+              <ion-item>Ventas</ion-item>>
+              <ion-item>Reportes</ion-item>>
+              <ion-item>Configuración</ion-item>>
+            </ion-list>
+          </ion-content>
+    </ion-menu>
+
+    <!-- the main content -->
+    <ion-nav [root]="root" main #content></ion-nav>
+  </ion-split-pane>
