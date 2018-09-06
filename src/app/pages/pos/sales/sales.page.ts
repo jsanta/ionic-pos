@@ -1,5 +1,9 @@
+import { HeaderModule } from './../../../components/header/header.module';
+import { ClientListModule } from './../../../components/client-list/client-list.module';
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+
 
 @Component({
   selector: 'app-sales',
