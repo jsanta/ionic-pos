@@ -1,4 +1,3 @@
-import { ClientListModule } from './../../../components/client-list/client-list.module';
 import { ComponentsModule } from './../../../components/components.module';
 import { NgModule, Injector } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -8,15 +7,19 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { SalesPage } from './sales.page';
-import { HeaderModule } from '../../../components/header/header.module';
-import { createCustomElement } from '@angular/elements';
-import { HeaderComponent } from '../../../components/header/header.component';
-import { ClientListComponent } from '../../../components/client-list/client-list.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: SalesPage
+    path: 'favorites',
+    loadChildren: './favorites/favorites.module#FavoritesPageModule'
+  },
+  {
+    path: 'products',
+    loadChildren: './product-search/product-search.module#ProductSearchPageModule'
+  },
+  {
+    path: 'clients',
+    loadChildren: './client-search/client-search.module#ClientSearchPageModule'
   }
 ];
 
@@ -29,6 +32,6 @@ const routes: Routes = [
     ComponentsModule
   ],
   providers: [],
-  declarations: [SalesPage]
+  declarations: []
 })
 export class SalesPageModule { }

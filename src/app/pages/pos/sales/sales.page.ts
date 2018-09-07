@@ -20,4 +20,11 @@ export class SalesPage implements OnInit {
     this.params = this.route.snapshot.params;
   }
 
+  onActivate($event: any) {
+    console.log('onActivate', $event);
+  }
+  onDeactivate($event: any) {
+    console.log('onDeactivate', $event);
+  }
+
 }

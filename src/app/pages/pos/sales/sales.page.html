@@ -1,6 +1,46 @@
 <app-header>Ventas</app-header>
 
 <ion-content padding>
+    <ion-grid align-items-stretch>
+        <ion-row>
+            <ion-col>
+                <div id="currentSaleProducts"></div>
+                <app-number-keys></app-number-keys>
+            </ion-col>
+            <ion-col>
+                <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <ion-toolbar>
+                            <ion-buttons>
+                                <ion-button
+                                    expand="block"
+                                    [routerLink]="['favorites']">
+                                    Favoritos
+                                </ion-button>
+                                <ion-button
+                                    expand="block"
+                                    [routerLink]="['products']">
+                                    Productos
+                                </ion-button>
+                                <ion-button
+                                    expand="block"
+                                    [routerLink]="['clients']">
+                                    Clientes
+                                </ion-button>
+                            </ion-buttons>
+                        </ion-toolbar>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="outlet">
+                    <ion-col>
+                        <ion-router-outlet></ion-router-outlet>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
 
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 
 </ion-content>

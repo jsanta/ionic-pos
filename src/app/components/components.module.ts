@@ -9,6 +9,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { NumberKeysComponent } from './number-keys/number-keys.component';
+import { ClientSearchComponent } from './client-search/client-search.component';
+import { ProductSearchComponent } from './product-search/product-search.component';
+import { FavoriteProductsComponent } from './favorite-products/favorite-products.component';
 
 @NgModule({
   imports: [
@@ -21,14 +25,22 @@ import { IonicModule } from '@ionic/angular';
     ClientListComponent,
     ProductItemComponent,
     ProductListComponent,
-    HeaderComponent
+    HeaderComponent,
+    NumberKeysComponent,
+    ClientSearchComponent,
+    ProductSearchComponent,
+    FavoriteProductsComponent
   ],
   exports: [
     ClientItemComponent,
     ClientListComponent,
     ProductItemComponent,
     ProductListComponent,
-    HeaderComponent
+    HeaderComponent,
+    NumberKeysComponent,
+    ClientSearchComponent,
+    ProductSearchComponent,
+    FavoriteProductsComponent
   ]
 
 })

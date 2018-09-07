@@ -11,30 +11,34 @@ import { IonicModule } from '@ionic/angular';
 
 import { PosPage } from './pos.page';
 import { ComponentsModule } from '../../components/components.module';
+import { SalesPage } from './sales/sales.page';
 
 const routes: Routes = [
-  { path: 'sales', loadChildren: './sales/sales.module#SalesPageModule' },
+  {
+    path: 'sales',
+    component: SalesPage,
+    children: [
+      {
+        path: '',
+        loadChildren: './sales/sales.module#SalesPageModule'
+      }
+    ]
+  },
   { path: 'reports', loadChildren: './reports/reports.module#ReportsPageModule' },
   { path: 'config', loadChildren: './config/config.module#ConfigPageModule' }
 ];
 
 @NgModule({
+  declarations: [
+    SalesPage
+  ],
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    ComponentsModule,
-    // HeaderModule,
-    // ClientListModule
+    ComponentsModule
   ],
-  providers: [
-    // HeaderComponent,
-    // ClientListComponent
-  ]
-  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  // exports: [ HeaderComponent ],
-  // declarations: [ PosPage ],
-  // entryComponents: [ PosPage ]
+  providers: []
 })
 export class PosPageModule {}
